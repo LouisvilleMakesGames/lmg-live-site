@@ -73,10 +73,7 @@
 <div class="post" id="">
 <article>
      <h2>Locally Made Games at Louisville Arcade Expo!</h2>
-        <div class="author-date">
-            <p>By Alex Bezuska</p>
-            <p>2023-02-20</p>
-        </div>
+        <p class="author-date">By Alex Bezuska, on 2023-02-20</p>
 <div class="row">
    
     <div class="col-md-6">
@@ -85,9 +82,9 @@
         <a href="https://www.louisvillearcade.com/" target="_blank" class="btn btn-primary">Get your tickets for LAX!</a>
     </div>
      <div class="col-md-6">
-        <img class="img-fluid" src="/img/louisville-arcade-expo-2023-promo.jpg" alt="Locally Made Games at Louisville Arcade Expo!">
-        <strong>Locally-made indie games</strong>
-        <p>available for all ages to try out at LAX</p>   
+        <div class="image-container"><img class="img-fluid" src="/img/louisville-arcade-expo-2023-promo.jpg" alt="Locally Made Games at Louisville Arcade Expo!"></div>
+        <p class="fw-bold image-caption-strong">Locally-made indie games</p>
+        <p class="image-caption">available for all ages to try out at LAX</p>   
     </div>
 </div>
 </article>
@@ -99,10 +96,7 @@
 <div class="post" id="">
 <article>
      <h2>Why Licenses Matter</h2>
-        <div class="author-date">
-            <p>By Alex Bezuska</p>
-            <p>2023-02-19</p>
-        </div>
+        <p class="author-date">By Alex Bezuska, on 2023-02-19</p>
 <div class="row">
    
     <div class="col-md-6">
@@ -110,9 +104,9 @@
         <p>When creating a game project, it can be tempting to use assets found online as a shortcut to creating original content. However, it is important to pay attention to the license associated with each asset to ensure that it can be used appropriately.</p><p>Creative Commons Zero (CC0) is a public domain license that allows for free use of an asset without attribution. However, most other licenses do require some form of attribution, which means giving credit to the original artist for their work. The MIT license is one example of a license that requires attribution. Game developers should also be wary of &quot;viral&quot; licenses like the GPL v3, which requires that any derivative works also be released under the GPL v3 license.</p><p>When using other people&#x27;s work in game projects, it&#x27;s important to make sure that the artist receives proper credit. This can be done through including the artist&#x27;s name in the game credits or on the game&#x27;s page on a jam site, for example.</p>
     </div>
      <div class="col-md-6">
-        <img class="img-fluid" src="/img/Jason-Thompson---Local-Louisville-composer.jpg" alt="Why Licenses Matter">
-        <strong>Jason Thompson, Local Louisville composer</strong>
-        <p>Photo by David R. Lutman, Courier Journal, Aug 4 2019</p>   
+        <div class="image-container"><img class="img-fluid" src="/img/Jason-Thompson---Local-Louisville-composer.jpg" alt="Why Licenses Matter"></div>
+        <p class="fw-bold image-caption-strong">Jason Thompson, Local Louisville composer</p>
+        <p class="image-caption">Photo by David R. Lutman, Courier Journal, Aug 4 2019</p>   
     </div>
 </div>
 </article>
@@ -153,7 +147,18 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+  window.addEventListener("load", function() {
+  const elements = document.querySelectorAll(".image-container");
+  const colors = ["red", "blue", "yellow"];
+  
+  elements.forEach(function(element) {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    element.classList.add(randomColor);
+  });
+});
 
+</script>
 </body>
 
 

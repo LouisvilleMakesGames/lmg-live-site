@@ -122,6 +122,26 @@ h2 i {
 
 }
 
+
+.image-container.red::after {
+ 
+  background-color: #EA3657;
+
+
+}
+.image-container.blue::after {
+ 
+  background-color: #6ACAD0;
+
+
+}
+.image-container.yellow::after {
+  
+  background-color: #EDDE44;
+
+
+}
+
 .image-container:hover {
   transform: rotate(3deg);
 }
@@ -165,3 +185,12 @@ h2 i {
   margin: 150px 40px;
 }
 
+.image-caption-strong, .image-caption{
+  text-align: right;
+  margin-bottom: 0px;
+}
+
+.author-date{
+  font-style: italic;
+  font-size: 14px;
+}
