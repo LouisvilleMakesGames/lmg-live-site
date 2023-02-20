@@ -202,3 +202,11 @@ h2 i {
 .btn:hover {
   transform: rotate3d(1, 1, 0, 10deg);
 }
+
+.game-card{
+  margin: 10px;
+}
+
+.card-text{
+  margin: 0;
+}
