@@ -205,6 +205,20 @@ h2 i {
 
 .game-card{
   margin: 10px;
+
+}
+
+.card-img-container{
+  text-align: center;
+//background: black;
+max-height: 185px;
+}
+
+.card-img-top{
+  margin: 0 auto !important;
+  width: auto !important;
+  max-height: 185px;
+  max-width: 100%;
 }
 
 .card-text{
