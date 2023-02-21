@@ -218,6 +218,16 @@ max-height: 185px;
   max-width: 100%;
 }
 
+.game-card a img{
+  border: 2px solid transparent;
+
+}
+.game-card a img:hover{
+  border: 2px solid white;
+
+}
+
+
 .card-text{
   margin: 0;
 }
