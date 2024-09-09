@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Donation data
     const donationGoal = 5000;
-    const currentDonation = 265;  
-    const donors = 12;
+    const currentDonation = 290;  
+    const donors = 13;
 
     // HTML Elements
     const donationAmountElement = document.getElementById("current-donation-amount");
