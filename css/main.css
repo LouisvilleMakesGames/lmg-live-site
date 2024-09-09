@@ -618,3 +618,7 @@ td {
 td:hover {
   background-color: lightgray;
 }
+
+.schedule li{
+text-align: left;
+}
