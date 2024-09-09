@@ -465,3 +465,142 @@ p {
       background-position: 300%;
   }
 }
+
+.text-muted{
+  color: rgba(255,255,255,0.4) !important;
+}
+
+/* Custom styles for the donation tracker */
+.donation-tracker {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.progress {
+  height: 40px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-image: linear-gradient(90deg, #EA3657, #6ACAD0, #EDDE44);
+  background-size: 200% 100%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.donation-amounts {
+  font-size: 1.5rem;
+}
+
+/* Custom styles for the donation tracker */
+.donation-tracker {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.progress {
+  height: 40px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-image: linear-gradient(90deg, #EA3657, #6ACAD0, #EDDE44);
+  background-size: 200% 100%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.donation-amounts {
+  font-size: 1.5rem;
+}
+
+/* Pixel Pledge grid */
+#pixel-pledge {
+  display: grid;
+  grid-template-columns: repeat(64, 2px);
+  grid-template-rows: repeat(64, 2px);
+  gap: 1px;
+}
+
+#pixel-pledge div {
+  width: 2px;
+  height: 2px;
+}
+
+/* Additional styling for the page */
+.donate-header {
+  background-color: #EA3657;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donate-btn {
+  background: linear-gradient(45deg, #EA3657, #6ACAD0, #EDDE44);
+  background-size: 300%;
+  padding: 20px 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-position 0.5s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Custom Button Styles for Consistent Primary Buttons with Black Text */
+.custom-btn-primary {
+  background-color: #6ACAD0;
+  border-color: #6ACAD0;
+  color: black;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn-primary:hover {
+  background-color: #83D7DF; /* Lighter Blue on Hover */
+  border-color: #83D7DF;
+  color: black; /* Ensure text remains black on hover */
+}
+
+/* Custom Bid Button Styles for Red Buttons with White Text */
+.custom-btn-bid {
+  background-color: #EA3657;
+  border-color: #EA3657;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn-bid:hover {
+  background-color: #F27890; /* Lighter Red on Hover */
+  border-color: #F27890;
+  color: white; /* Ensure text remains white on hover */
+}
