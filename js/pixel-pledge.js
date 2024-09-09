@@ -74,6 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load the PNG files (adjust the list as needed)
-    const pngFiles = ['phil p-0x0.png'];
+    const pngFiles = ['phil p-0x59.png'];
     loadPngFiles(pngFiles);
 });
