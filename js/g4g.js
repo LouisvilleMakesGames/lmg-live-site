@@ -12,14 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Count up animation for donation amount
     let startAmount = 0;
-    const countUpSpeed = 50;  // Speed for counting up
+    const countUpSpeed = 20;  // Speed for counting up in smaller increments
+    const increment = currentDonation / 100;  // Small increments for the animation
 
     const countUp = setInterval(function() {
-        if (startAmount >= currentDonation) {
+        // Ensure we don't go over the current donation amount
+        if (startAmount + increment >= currentDonation) {
             clearInterval(countUp);
+            donationAmountElement.textContent = currentDonation;  // Set to the exact donation amount
         } else {
-            startAmount += 50;  // Increment
-            donationAmountElement.textContent = startAmount;
+            startAmount += increment;  // Increment by a small value
+            donationAmountElement.textContent = Math.floor(startAmount);  // Update with integer value
         }
     }, countUpSpeed);
 
