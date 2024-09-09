@@ -159,8 +159,23 @@
                     (We will only accept and display appropriate images)
                 </p>
                <div style="width: 100%; height: 100%;">
-    <canvas id="pixelCanvas" style="border: 1px solid #666666;"></canvas>
-</div>
+                <table>
+                <tbody>
+                    <!-- Loop through 64 rows -->
+                    <script>
+                        for (let row = 0; row < 64; row++) {
+                            document.write('<tr>');
+                            // Loop through 64 columns
+                            for (let col = 0; col < 64; col++) {
+                                let cellId = `cell-${row}-${col}`;
+                                document.write(`<td id="${cellId}"></td>`);
+                            }
+                            document.write('</tr>');
+                        }
+                    </script>
+                </tbody>
+            </table>
+            </div>
             </div>
             
             <!-- Right Column: Donate Button and Progress Bar -->
@@ -275,8 +290,8 @@
             <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
                 <h3>LMG Desk Mat</h3>
                 <img src="img/lmg-deskmat.jpg" alt="LMG Desk Mat" class="img-fluid mb-3" style="max-width: 150px;">
-                <p>Donate $25 or more and receive a LMG Desk Mat!</p>
-                <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=25" class="btn custom-btn-primary mt-auto" target="_blank">Donate $25</a> then
+                <p>Donate $50 or more and receive a LMG Desk Mat!</p>
+                <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=25" class="btn custom-btn-primary mt-auto" target="_blank">Donate $50</a> then
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
             </div>
         </div>

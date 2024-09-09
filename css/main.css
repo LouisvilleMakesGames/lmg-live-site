@@ -604,3 +604,17 @@ p {
   border-color: #F27890;
   color: white; /* Ensure text remains white on hover */
 }
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  width: 9px;
+  height: 9px;
+  border: 1px solid black;
+}
+
+td:hover {
+  background-color: lightgray;
+}
