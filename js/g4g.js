@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Donation data
     const donationGoal = 5000;
-    const currentDonation = 355;  
-    const donors = 17;
+    const currentDonation = 545;  
+    const donors = 21;
 
     // HTML Elements
     const donationAmountElement = document.getElementById("current-donation-amount");
@@ -10,30 +10,41 @@ document.addEventListener("DOMContentLoaded", function() {
     const donorCountElement = document.getElementById("donor-count-message");
     const percentOfGoalElement = document.getElementById("percent-of-goal");
 
-    // Count up animation for donation amount
+    // Count up animation for donation amount and progress bar
     let startAmount = 0;
-    const countUpSpeed = 20;  // Speed for counting up in smaller increments
-    const increment = currentDonation / 100;  // Small increments for the animation
+    let startPercentage = 0;
+    const duration = 2000; // Total duration for the animation in milliseconds
+    const frameRate = 60; // Number of frames per second (60fps)
+    const totalFrames = Math.round((duration / 1000) * frameRate);
+    const incrementAmount = currentDonation / totalFrames;
+    const incrementPercentage = Math.floor((currentDonation / donationGoal) * 100) / totalFrames;
 
-    const countUp = setInterval(function() {
-        // Ensure we don't go over the current donation amount
-        if (startAmount + increment >= currentDonation) {
-            clearInterval(countUp);
+    let frame = 0;
+
+    const animate = setInterval(function() {
+        frame++;
+
+        // Increment donation amount and update text
+        startAmount += incrementAmount;
+        donationAmountElement.textContent = Math.floor(startAmount);
+
+        // Increment progress bar percentage and update width
+        startPercentage += incrementPercentage;
+        progressBarElement.style.width = `${Math.floor(startPercentage)}%`;
+        progressBarElement.setAttribute('aria-valuenow', Math.floor(startPercentage));
+
+        // End the animation when reaching the final donation amount
+        if (frame >= totalFrames) {
+            clearInterval(animate);
             donationAmountElement.textContent = currentDonation;  // Set to the exact donation amount
-        } else {
-            startAmount += increment;  // Increment by a small value
-            donationAmountElement.textContent = Math.floor(startAmount);  // Update with integer value
+            progressBarElement.style.width = `${Math.floor((currentDonation / donationGoal) * 100)}%`;  // Set exact percentage
         }
-    }, countUpSpeed);
-
-    // Calculate percentage of the goal reached and round it down to the nearest whole number
-    const donationPercentage = Math.floor((currentDonation / donationGoal) * 100);
-    progressBarElement.style.width = `${donationPercentage}%`;
-    progressBarElement.setAttribute('aria-valuenow', donationPercentage);
+    }, 1000 / frameRate);
 
     // Display donor thank you message
     donorCountElement.textContent = `Thank you so much to our ${donors} donors so far!`;
 
     // Display percent of the goal reached
+    const donationPercentage = Math.floor((currentDonation / donationGoal) * 100);
     percentOfGoalElement.textContent = `(${donationPercentage}% of our goal)`;
 });

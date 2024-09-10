@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load the PNG files (adjust the list as needed)
-    const pngFiles = ['phil p-0x59.png',
+    const pngFiles = ['dioram-0x58.png',
         'glenn essex-31x31.png',
         'galactical-59x28.png'
     ];
