@@ -9,9 +9,15 @@ function loadPngFiles(fileList) {
         // Create an image element to load the PNG file
         let img = new Image();
         img.src = `/js/pixels/${file}`;
+
+        // When the image loads, draw its pixels on the grid
         img.onload = function() {
-            // When the image loads, draw its pixels on the grid
             drawImageOnGrid(img, startX, startY, userName);
+        };
+
+        // If the image fails to load, log an error message
+        img.onerror = function() {
+            console.log(`Error: Failed to load image file ${file}`);
         };
     });
 }
@@ -74,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load the PNG files (adjust the list as needed)
-    const pngFiles = ['Dioram-0x58.png',
+    const pngFiles = [
+        'Dioram-0x58.png',
         'Glenn Essex-31x31.png',
         'galactical-59x28.png',
         'Megan Farmer-61x60.png'
