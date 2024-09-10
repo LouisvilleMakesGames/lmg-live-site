@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load the PNG files (adjust the list as needed)
     const pngFiles = [
         'Dioram-0x58.png',
-        'Glenn Essex-31x31.png',
+        'Glenn_Essex-31x31.png',
         'galactical-59x28.png',
-        'Megan Farmer-61x60.png'
+        'Megan_Farmer-61x60.png'
     ];
     loadPngFiles(pngFiles);
 });
