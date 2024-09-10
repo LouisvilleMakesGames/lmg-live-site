@@ -622,3 +622,7 @@ td:hover {
 .schedule li{
 text-align: left;
 }
+
+.pixel-pledge{
+  border: 1px solid white;
+}
