@@ -17,7 +17,7 @@ function loadPngFiles(fileList) {
 
         // If the image fails to load, log an error message
         img.onerror = function() {
-            console.log(`Error: Failed to load image file ${file}`);
+            console.log(`7 Error: Failed to load image file ${file}`);
         };
     });
 }
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the PNG files (adjust the list as needed)
     const pngFiles = [
-        'Dioram-0x58.png',
+        '_Dioram-0x58.png',
         'Glenn_Essex-31x31.png',
         'galactical-59x28.png',
         'Megan_Farmer-61x60.png'
