@@ -8,7 +8,7 @@ function loadPngFiles(fileList) {
 
         // Create an image element to load the PNG file
         let img = new Image();
-        img.src = `/js/pixels/${file}`;
+        img.src = `/js/pixels/${encodeURIComponent(file)}`;
 
         // When the image loads, draw its pixels on the grid
         img.onload = function() {
