@@ -81,10 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the PNG files (adjust the list as needed)
     const pngFiles = [
-        'Glenn_Essex-31+31.png',
         'Dioram-0+58.png',
+        'Glenn_Essex-31+31.png',
         'galactical-59+28.png',
-        'Megan_Farmer-61+60.png'
+        'Megan_Farmer-61+60.png',
+        'ScottN-18+3.png',
+        'Moon_and_Moss-0+0.png'
     ];
     loadPngFiles(pngFiles);
 });
