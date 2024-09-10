@@ -4,7 +4,7 @@ function loadPngFiles(fileList) {
         // Extract the user name and coordinates from the filename
         let fileName = file.replace('.png', '');
         let [userName, coordinates] = fileName.split('-');
-        let [startX, startY] = coordinates.split('x').map(Number);
+        let [startX, startY] = coordinates.split('+').map(Number);
 
         // Create an image element to load the PNG file
         let img = new Image();
@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the PNG files (adjust the list as needed)
     const pngFiles = [
-        'Glenn_Essex-31x31.png',
-        'Dioram-0x58.png',
-        'galactical-59x28.png',
-        'Megan_Farmer-61x60.png'
+        'Glenn_Essex-31+31.png',
+        'Dioram-0+58.png',
+        'galactical-59+28.png',
+        'Megan_Farmer-61+60.png'
     ];
     loadPngFiles(pngFiles);
 });
