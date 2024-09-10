@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the PNG files (adjust the list as needed)
     const pngFiles = [
-        'Dioram-0x58.png',
         'Glenn_Essex-31x31.png',
+        'Dioram-0x58.png',
         'galactical-59x28.png',
         'Megan_Farmer-61x60.png'
     ];
