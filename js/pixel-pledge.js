@@ -1,71 +1,62 @@
-// Function to load PNG files and place them on the grid
+const pngFiles = [
+    'Dioram-0+58.png',
+    'Glenn_Essex-31+31.png',
+    'galactical-59+28.png',
+    'Megan_Farmer-61+60.png',
+    'ScottN-18+3.png',
+    'Moon_and_Moss-0+0.png'
+];
+
+let filledGridCells = new Set();
+
 function loadPngFiles(fileList) {
     fileList.forEach(file => {
-        // Extract the user name and coordinates from the filename
         let fileName = file.replace('.png', '');
         let [userName, coordinates] = fileName.split('-');
         let [startX, startY] = coordinates.split('+').map(Number);
 
-        // Create an image element to load the PNG file
         let img = new Image();
         img.src = `/js/pixels/${encodeURIComponent(file)}`;
 
-        // When the image loads, draw its pixels on the grid
         img.onload = function() {
             drawImageOnGrid(img, startX, startY, userName);
         };
 
-        // If the image fails to load, log an error message
         img.onerror = function() {
             console.log(`7 Error: Failed to load image file ${file}`);
         };
     });
 }
 
-// Function to draw the image on the grid
 function drawImageOnGrid(img, startX, startY, userName) {
-    // Create a temporary canvas to read the PNG file's pixel data
     let canvas = document.createElement('canvas');
     let context = canvas.getContext('2d');
-
-    // Set the canvas size to the image size
     canvas.width = img.width;
     canvas.height = img.height;
-
-    // Draw the image onto the canvas
     context.drawImage(img, 0, 0);
-
-    // Get the pixel data from the image
     let imageData = context.getImageData(0, 0, img.width, img.height).data;
 
-    // Loop through each pixel in the image
     for (let y = 0; y < img.height; y++) {
         for (let x = 0; x < img.width; x++) {
-            // Calculate the index in the image data array
             let index = (y * img.width + x) * 4;
-
-            // Extract the RGBA values
             let r = imageData[index];
             let g = imageData[index + 1];
             let b = imageData[index + 2];
-            let a = imageData[index + 3]; // Alpha (transparency)
+            let a = imageData[index + 3];
 
-            // If the pixel is not fully transparent, apply it to the grid
             if (a > 0) {
                 let cellId = `cell-${startY + y}-${startX + x}`;
                 let cellElement = document.getElementById(cellId);
                 if (cellElement) {
-                    // Set the background color of the cell
                     cellElement.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
-                    // Set the tooltip to show location and user's name
-                    cellElement.setAttribute('data-owner', userName); // Save the owner name for hover
+                    cellElement.setAttribute('data-owner', userName);
+                    filledGridCells.add(cellId); // Mark this cell as filled
                 }
             }
         }
     }
 }
 
-// Add a hover effect to display the cell location and, if applicable, the donor's name
 document.addEventListener('DOMContentLoaded', () => {
     const gridCells = document.querySelectorAll('td');
     
@@ -79,14 +70,102 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Load the PNG files (adjust the list as needed)
-    const pngFiles = [
-        'Dioram-0+58.png',
-        'Glenn_Essex-31+31.png',
-        'galactical-59+28.png',
-        'Megan_Farmer-61+60.png',
-        'ScottN-18+3.png',
-        'Moon_and_Moss-0+0.png'
-    ];
     loadPngFiles(pngFiles);
 });
+
+function fetchDonationDataAndFillUnclaimed() {
+    fetch('https://g4g.lmg.giving/donation-data')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch donation data');
+            return response.json();
+        })
+        .then(donationData => {
+            console.log('Donation data:', donationData); 
+            const totalRaised = donationData.raised;
+            const totalDonors = donationData.donors;
+
+            console.log('Total raised:', totalRaised);
+            console.log('Total donors:', totalDonors);
+
+            const claimedDonors = pngFiles.length;
+            const unclaimedDonors = totalDonors - claimedDonors;
+            const unclaimedPixels = totalRaised - countColoredPixels();
+
+            console.log('Claimed donors:', claimedDonors);
+            console.log('Unclaimed donors:', unclaimedDonors);
+            console.log('Unclaimed pixels:', unclaimedPixels);
+
+            if (unclaimedDonors > 0 && unclaimedPixels > 0) {
+                const pixelsPerDonor = Math.floor(unclaimedPixels / unclaimedDonors);
+                distributeUnclaimedPixels(unclaimedDonors, pixelsPerDonor);
+            }
+        })
+        .catch(error => console.error('Error fetching donation data or calculating unclaimed pixels:', error));
+}
+
+function countColoredPixels() {
+    let totalColoredPixels = 0;
+    pngFiles.forEach(file => {
+        let img = new Image();
+        img.src = `/js/pixels/${encodeURIComponent(file)}`;
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            context.drawImage(img, 0, 0);
+            const imageData = context.getImageData(0, 0, img.width, img.height).data;
+            for (let i = 0; i < imageData.length; i += 4) {
+                if (imageData[i + 3] > 0) {
+                    totalColoredPixels++;
+                }
+            }
+            console.log(`Colored pixels for ${file}:`, totalColoredPixels);
+        };
+    });
+    return totalColoredPixels;
+}
+
+function distributeUnclaimedPixels(unclaimedDonors, pixelsPerDonor) {
+    let unclaimedPixelCoords = getUnfilledGridCoords();
+    
+    for (let i = 0; i < unclaimedDonors; i++) {
+        let pixelsToPlace = pixelsPerDonor;
+        while (pixelsToPlace > 0 && unclaimedPixelCoords.length > 0) {
+            const randomIndex = Math.floor(Math.random() * unclaimedPixelCoords.length);
+            const cellId = unclaimedPixelCoords[randomIndex];
+            const cellElement = document.getElementById(cellId);
+
+            if (cellElement) {
+                cellElement.style.backgroundColor = 'rgba(50, 50, 50, 1)';
+                cellElement.setAttribute('data-owner', 'unclaimed pixels from donor');
+                filledGridCells.add(cellId); // Mark this cell as filled
+                pixelsToPlace--;
+            }
+
+            unclaimedPixelCoords.splice(randomIndex, 1); // Remove the chosen cell from available slots
+        }
+
+        console.log(`Assigned ${pixelsPerDonor} pixels for unclaimed donor ${i + 1}`);
+    }
+}
+
+function getUnfilledGridCoords() {
+    let coords = [];
+    const gridCells = document.querySelectorAll('td');
+    
+    gridCells.forEach(cell => {
+        const cellId = cell.id;
+        if (!filledGridCells.has(cellId)) {
+            coords.push(cellId);
+        }
+    });
+
+    return coords;
+}
+
+window.onload = function() {
+    setTimeout(() => {
+        fetchDonationDataAndFillUnclaimed();
+    }, 0);
+};
