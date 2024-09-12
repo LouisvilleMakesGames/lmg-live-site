@@ -623,3 +623,13 @@ td:hover {
 text-align: left;
 }
 
+/* Define the green color for items with bids */
+.bid-active {
+  border-color: #4CAF50; /* Nice green color */
+  color: #4CAF50; /* Matches the border */
+}
+
+.bid-active span#current-bid {
+  font-weight: bold;
+  color: #4CAF50;
+}
