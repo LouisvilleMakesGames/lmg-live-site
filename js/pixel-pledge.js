@@ -4,7 +4,11 @@ const pngFiles = [
     'galactical-59+28.png',
     'Megan_Farmer-61+60.png',
     'ScottN-18+3.png',
-    'Moon_and_Moss-0+0.png'
+    'Moon_and_Moss-0+0.png',
+    'Jared_Cordray-55+0.png',
+    'Eric_Lathrop-33+0.png',
+    'Eve-14+12.png',
+    'SeeToo-30+30.png'
 ];
 
 let filledGridCells = new Set();
