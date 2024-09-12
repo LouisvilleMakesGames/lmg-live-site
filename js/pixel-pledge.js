@@ -130,24 +130,52 @@ function distributeUnclaimedPixels(unclaimedDonors, pixelsPerDonor) {
     let unclaimedPixelCoords = getUnfilledGridCoords();
     
     for (let i = 0; i < unclaimedDonors; i++) {
-        let pixelsToPlace = pixelsPerDonor;
-        while (pixelsToPlace > 0 && unclaimedPixelCoords.length > 0) {
+        const patchSize = Math.sqrt(pixelsPerDonor);
+        const dimensions = [Math.floor(patchSize), Math.ceil(pixelsPerDonor / Math.floor(patchSize))];
+
+        let placed = false;
+        while (!placed && unclaimedPixelCoords.length > 0) {
             const randomIndex = Math.floor(Math.random() * unclaimedPixelCoords.length);
-            const cellId = unclaimedPixelCoords[randomIndex];
-            const cellElement = document.getElementById(cellId);
-
-            if (cellElement) {
-                cellElement.style.backgroundColor = 'rgba(50, 50, 50, 1)';
-                cellElement.setAttribute('data-owner', 'unclaimed pixels from donor');
-                filledGridCells.add(cellId); // Mark this cell as filled
-                pixelsToPlace--;
-            }
-
-            unclaimedPixelCoords.splice(randomIndex, 1); // Remove the chosen cell from available slots
+            const startCellId = unclaimedPixelCoords[randomIndex];
+            placed = placePatch(startCellId, dimensions, unclaimedPixelCoords);
         }
 
         console.log(`Assigned ${pixelsPerDonor} pixels for unclaimed donor ${i + 1}`);
     }
+}
+
+function placePatch(startCellId, [width, height], availableCoords) {
+    let [startRow, startCol] = startCellId.replace('cell-', '').split('-').map(Number);
+    let cellsToFill = [];
+
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            const nextRow = startRow + y;
+            const nextCol = startCol + x;
+            const nextCellId = `cell-${nextRow}-${nextCol}`;
+
+            if (availableCoords.includes(nextCellId) && !filledGridCells.has(nextCellId)) {
+                cellsToFill.push(nextCellId);
+            } else {
+                return false; // Failed to place the patch
+            }
+        }
+    }
+
+    cellsToFill.forEach(cellId => {
+        const cellElement = document.getElementById(cellId);
+        if (cellElement) {
+            cellElement.style.backgroundColor = 'rgba(70, 70, 70, 1)'; // Darker grey
+            cellElement.setAttribute('data-owner', 'unclaimed pixels from donor');
+            filledGridCells.add(cellId); // Mark this cell as filled
+        }
+        const index = availableCoords.indexOf(cellId);
+        if (index > -1) {
+            availableCoords.splice(index, 1); // Remove from available slots
+        }
+    });
+
+    return true; // Successfully placed the patch
 }
 
 function getUnfilledGridCoords() {
