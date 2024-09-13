@@ -163,8 +163,20 @@
   <div class="row">
     <!-- Left Column: Donate Button and Progress Bar -->
     <div class="col-12 col-md-6 text-center">
-      <h2> LAST DAY TO DONATE!</h2>
-      <br>
+
+
+
+<div class="countdown-container">
+  <div class="countdown-title">Time Left to Donate</div>
+  <div class="countdown">
+    <span id="hours">00</span>h : 
+    <span id="minutes">00</span>m : 
+    <span id="seconds">00</span>s
+  </div>
+</div>
+
+
+
       <a href="https://www.giveforgoodlouisville.org/organization/Louisville-Makes-Games" class="donate-btn mt-4">Donate Now</a>
       
       <!-- Donation Tracker -->
@@ -402,8 +414,8 @@
         <img src="img/auction/thebestjstn-animal-support.jpg" alt="Original Art Print - Animal Support" class="img-fluid mb-2">
         <h4>Original Art Print - Animal Support</h4>
         <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-4-bid">5</span>
-          <span class="text-muted">(Retail: $25.00)</span>
+        <p>Current Bid: $ <span id="auction-item-4-bid">5</span>
+          <span class="text-muted">Jesse</span>
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Animal+Support" class="btn custom-btn-bid mt-auto">Place Bid</a>
       </div>
@@ -457,8 +469,8 @@
         <img src="img/auction/thebestjstn-gfhost-fried-egg.jpg" alt="Original Art Print - Ghost Fried Egg" class="img-fluid mb-2">
         <h4>Original Art Print - Ghost Fried Egg</h4>
         <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-8-bid">5</span>
-          <span class="text-muted">(Retail: $25.00)</span>
+        <p>Starting Bid: $ <span id="auction-item-8-bid">25</span>
+          <span class="text-muted">Eve N</span>
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Ghost+Fried+Egg" class="btn custom-btn-bid mt-auto">Place Bid</a>
       </div>
@@ -470,8 +482,8 @@
         <img src="img/auction/thebestjstn-ghostbuster-luigi.jpg" alt="Original Art Print - Ghostbuster Luigi" class="img-fluid mb-2">
         <h4>Original Art Print - Ghostbuster Luigi</h4>
         <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-9-bid">25</span><br>
-        <span class="bidder">Eve N</span><br>
+        <p>Starting Bid: $ <span id="auction-item-9-bid">40</span><br>
+        <span class="bidder">Jonah</span><br>
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Ghostbuster+Luigi" class="btn custom-btn-bid mt-auto">Place Bid</a>
       </div>
@@ -613,6 +625,49 @@
     <!-- Custom JS -->
     <script src="js/g4g.js"></script>
     <script src="js/pixel-pledge.js"></script>
+    <script src="js/countdown.js"></script> 
+
+    <script>
+  // Function to add and remove the 'shake' class for a brief shake effect
+  function shakeElement(element, interval) {
+    setInterval(() => {
+      element.classList.add('shake'); // Add shake class
+      setTimeout(() => {
+        element.classList.remove('shake'); // Remove shake class after 0.5 seconds
+      }, 500); // Shake duration
+    }, interval); // Shake interval
+  }
+
+  // Get elements by tag name
+  const headings = document.querySelectorAll('h1, h2, h3');
+  const paragraphs = document.querySelectorAll('p');
+  const images = document.querySelectorAll('img');
+  const buttons = document.querySelectorAll('button');
+  const divs = document.querySelectorAll('div');
+
+  // Apply shake effect to each type of element with different offsets
+  headings.forEach((heading, index) => {
+    shakeElement(heading, 3000 + index * 500); // Shake every 3 to 3.5 seconds for headings
+  });
+
+  paragraphs.forEach((paragraph, index) => {
+    shakeElement(paragraph, 4000 + index * 500); // Shake every 4 to 4.5 seconds for paragraphs
+  });
+
+  images.forEach((image, index) => {
+    shakeElement(image, 5000 + index * 500); // Shake every 5 to 5.5 seconds for images
+  });
+
+  buttons.forEach((button, index) => {
+    shakeElement(button, 6000 + index * 500); // Shake every 6 to 6.5 seconds for buttons
+  });
+
+  divs.forEach((div, index) => {
+    shakeElement(div, 7000 + index * 500); // Shake every 7 to 7.5 seconds for divs
+  });
+
+</script>
+
   </body>
 </html>
 <footer class="bg-dark text-light p-5">

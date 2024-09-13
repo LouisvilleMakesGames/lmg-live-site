@@ -11,7 +11,8 @@ const pngFiles = [
     'SeeToo-30+30.png',
     'Eve-50+55.png',
     'Iron135-45+02.png',
-    'Nick_La_Tona-7+35.png'
+    'Nick_La_Tona-7+35.png',
+    'Anne_Farmer-2+30.png'
 ];
 
 function loadPngFiles(fileList) {
