@@ -4,7 +4,7 @@ const pngFiles = [
     'galactical-59+28.png',
     'Megan_Farmer-61+60.png',
     'ScottN-18+3.png',
-    'Moon_and_Moss-0+0.png',
+    'MoonAndMoss-0+0.png',
     'Jared_Cordray-55+0.png',
     'Eric_Lathrop-33+0.png',
     'Eve-14+12.png',
@@ -12,7 +12,11 @@ const pngFiles = [
     'Eve-50+55.png',
     'Iron135-45+02.png',
     'Nick_La_Tona-7+35.png',
-    'Anne_Farmer-2+30.png'
+    'Anne_Farmer-2+30.png',
+    'Anne_Farmer-2+30.png',
+    'Alex_Garbus-33+15.png',
+    'Roeder-33+08.png',
+    'Jessica_Prater-45+7.png'
 ];
 
 function loadPngFiles(fileList) {
