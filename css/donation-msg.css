@@ -1,0 +1,9 @@
+h1::before, h2::before, h3::before {
+    content: "Have you donated yet? ";
+    color: black;
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  

@@ -53,6 +53,14 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.css">
 
+    <!-- countdown CSS -->
+  <link rel="stylesheet" href="css/countdown.css">
+
+    <!-- donation-msg CSS puts "have you donates yet?" above all header texts -->
+
+    <!-- Shaking Elements CSS makes elements on the page shake randomly requires with shaking-elements.js -->
+  <link rel="stylesheet" href="css/shaking-elements.css">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -73,36 +81,36 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item">
-          <a class="nav-link" href="index.html" >#giveforgood</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="home.html" >Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blog.html" >Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="games.html" >Games</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="warpzone.html" >Warpzone</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="resources.html" >Resources</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="code-of-conduct.html" >Code of Conduct</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="donate.html" >Donate</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="press.html" >Press</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://louisvillemakesgames.printify.me" target="_blank">Store</a>
-        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" >#giveforgood</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="home.html" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html" >Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.html" >Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="warpzone.html" >Warpzone</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html" >Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="code-of-conduct.html" >Code of Conduct</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html" >Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="press.html" >Press</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://louisvillemakesgames.printify.me" target="_blank">Store</a>
+            </li>
         
         </ul>
       </div>
@@ -149,9 +157,39 @@
             <p class="text-left"> Louisvlle Makes Games is a 501(c)3 non-profit organization committed to fostering an inclusive, supportive environment for game developers of skill levels in the Louisville area. Through game jams, meetups, kids' classes, and creative events, LMG provides opportunities for collaboration and skill development, helping to reshape the gaming industry by breaking down stereotypes and making game development accessible to everyone. </p>
 
 
+<!--
             <h2>🔴Livestream going on now!</h2>
             <a href="https://www.twitch.tv/louisvillemakesgames" target="_blank" style="display:inline-block; padding:15px 30px; background-color:#6441A4; color:white; text-decoration:none; font-size:18px; border-radius:5px; margin-top:20px;">
               <i class="fab fa-twitch"></i> Watch on Twitch </a>
+              -->
+<h2>🍿 Missed the livestream? No worries!</h2>
+<p>If you couldn’t make it on Thursday, don’t sweat it! You can catch all the action right here. Grab some popcorn and check out these videos to stay in the loop!</p>
+<ul class="list-unstyled">
+  <li>
+    <a href="https://www.youtube.com/watch?v=vIFYvsk_1X4&t=136s" target="_blank" class="btn btn-warning mb-2">
+      🎬 <i class="fas fa-film"></i> One-Hour Game Jam LIVE - Jonah Segree
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=irzFSRh8nsA&t=8605s" target="_blank" class="btn btn-warning mb-2">
+      🎬 <i class="fas fa-film"></i> Livestream pt 3
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=wuSTMNuK6rw&t=13727s" target="_blank" class="btn btn-warning mb-2">
+      🎬 <i class="fas fa-film"></i> Livestream pt 2
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=hrgaHuYLgWQ" target="_blank" class="btn btn-warning mb-2">
+      🎬 <i class="fas fa-film"></i> Livestream pt 1
+    </a>
+  </li>
+</ul>
+
+
+
+              
           </div>
         </div>
       </section>
@@ -164,8 +202,14 @@
     <!-- Left Column: Donate Button and Progress Bar -->
     <div class="col-12 col-md-6 text-center">
 
-
-
+<div class="alert alert-warning  d-flex align-items-center" role="alert">
+  <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+  <div>
+    <strong>PSA:</strong> If you have not donated, YOU STILL CAN! Donations are open until <strong>1:30 PM EST today!</strong>
+    <div class="small text-muted">- Glenn</div>
+  </div>
+</div>
+<!-- COUNTDOWN TIMER - needs countdown.css and countdown.js enabled -->
 <div class="countdown-container">
   <div class="countdown-title">Time Left to Donate</div>
   <div class="countdown">
@@ -427,8 +471,8 @@
         <img src="img/auction/thebestjstn-bowstoise.jpg" alt="Original Art Print - Bowstoise" class="img-fluid mb-2">
         <h4>Original Art Print - Bowstoise</h4>
         <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-5-bid">5</span>
-          <span class="text-muted">(Retail: $25.00)</span>
+        <p>Current Bid: $ <span id="auction-item-5-bid">15</span>
+          <span class="text-muted">Eve N</span>
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Bowstoise" class="btn custom-btn-bid mt-auto">Place Bid</a>
       </div>
@@ -626,47 +670,7 @@
     <script src="js/g4g.js"></script>
     <script src="js/pixel-pledge.js"></script>
     <script src="js/countdown.js"></script> 
-
-    <script>
-  // Function to add and remove the 'shake' class for a brief shake effect
-  function shakeElement(element, interval) {
-    setInterval(() => {
-      element.classList.add('shake'); // Add shake class
-      setTimeout(() => {
-        element.classList.remove('shake'); // Remove shake class after 0.5 seconds
-      }, 500); // Shake duration
-    }, interval); // Shake interval
-  }
-
-  // Get elements by tag name
-  const headings = document.querySelectorAll('h1, h2, h3');
-  const paragraphs = document.querySelectorAll('p');
-  const images = document.querySelectorAll('img');
-  const buttons = document.querySelectorAll('button');
-  const divs = document.querySelectorAll('div');
-
-  // Apply shake effect to each type of element with different offsets
-  headings.forEach((heading, index) => {
-    shakeElement(heading, 3000 + index * 500); // Shake every 3 to 3.5 seconds for headings
-  });
-
-  paragraphs.forEach((paragraph, index) => {
-    shakeElement(paragraph, 4000 + index * 500); // Shake every 4 to 4.5 seconds for paragraphs
-  });
-
-  images.forEach((image, index) => {
-    shakeElement(image, 5000 + index * 500); // Shake every 5 to 5.5 seconds for images
-  });
-
-  buttons.forEach((button, index) => {
-    shakeElement(button, 6000 + index * 500); // Shake every 6 to 6.5 seconds for buttons
-  });
-
-  divs.forEach((div, index) => {
-    shakeElement(div, 7000 + index * 500); // Shake every 7 to 7.5 seconds for divs
-  });
-
-</script>
+    <script src="js/shaking-elements.js"></script> 
 
   </body>
 </html>

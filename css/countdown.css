@@ -1,0 +1,33 @@
+.countdown-container {
+    display: block !important;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .countdown-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: blink 1.5s linear infinite;
+  }
+  .countdown {
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #222;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+  }
+  .countdown span {
+    color: #ffcc00;
+  }
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
