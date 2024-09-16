@@ -54,12 +54,10 @@
   <link rel="stylesheet" href="css/main.css">
 
     <!-- countdown CSS -->
-  <link rel="stylesheet" href="css/countdown.css">
 
     <!-- donation-msg CSS puts "have you donates yet?" above all header texts -->
 
     <!-- Shaking Elements CSS makes elements on the page shake randomly requires with shaking-elements.js -->
-  <link rel="stylesheet" href="css/shaking-elements.css">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -81,9 +79,6 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
 
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" >#giveforgood</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="home.html" >Home</a>
             </li>
@@ -116,564 +111,158 @@
       </div>
     </div>
   </nav>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Louisville Makes Games in supporting local game developers. Donate today to get a rare LMG holo sticker and participate in exciting events, including a Thursday livestream!">
-    <meta name="keywords" content="game development, Louisville, donation, nonprofit, livestream, auction, Pixel Pledge">
-    <meta name="author" content="Louisville Makes Games">
-    <title>Louisville Makes Games | Give for Good Day</title>
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <div style="height: 100px;"></div>
-    <!-- Header with Logos -->
-    <header class="text-center my-4">
-      <!-- Louisville Makes Games Logo -->
-      <img src="img/logos/lmg/louisville-makes-games-horzontal-logo-for-dark-bg.svg" alt="Louisville Makes Games Logo" class="img-fluid mb-3" style="width: 450px; max-width: 100%;">
-      <!-- Give for Good Logo -->
-      <img src="img/give-for-good-logo.png" alt="Give for Good Louisville Logo" class="img-fluid" style="width: 450px; max-width: 100%;">
-    </header>
 
 
-  
-    <main class="container">
-   
-      <!-- What we do section -->
-      <section class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <img src="img/what-does-lmg-do.png" alt="Louisville Makes Games presentation showing community members learning about game development" class="img-fluid" aria-label="Image showing a presentation by Louisville Makes Games">
-          </div>
-          <div class="col-md-7">
-            <h1>What do we do?</h1>
-            <p class="text-left"> Louisvlle Makes Games is a 501(c)3 non-profit organization committed to fostering an inclusive, supportive environment for game developers of skill levels in the Louisville area. Through game jams, meetups, kids' classes, and creative events, LMG provides opportunities for collaboration and skill development, helping to reshape the gaming industry by breaking down stereotypes and making game development accessible to everyone. </p>
+<main class="container my-5">
 
 
-<!--
-            <h2>🔴Livestream going on now!</h2>
-            <a href="https://www.twitch.tv/louisvillemakesgames" target="_blank" style="display:inline-block; padding:15px 30px; background-color:#6441A4; color:white; text-decoration:none; font-size:18px; border-radius:5px; margin-top:20px;">
-              <i class="fab fa-twitch"></i> Watch on Twitch </a>
-              -->
-<h2>🍿 Missed the livestream? No worries!</h2>
-<p>If you couldn’t make it on Thursday, don’t sweat it! You can catch all the action right here. Grab some popcorn and check out these videos to stay in the loop!</p>
-<ul class="list-unstyled">
-  <li>
-    <a href="https://www.youtube.com/watch?v=vIFYvsk_1X4&t=136s" target="_blank" class="btn btn-warning mb-2">
-      🎬 <i class="fas fa-film"></i> One-Hour Game Jam LIVE - Jonah Segree
-    </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/watch?v=irzFSRh8nsA&t=8605s" target="_blank" class="btn btn-warning mb-2">
-      🎬 <i class="fas fa-film"></i> Livestream pt 3
-    </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/watch?v=wuSTMNuK6rw&t=13727s" target="_blank" class="btn btn-warning mb-2">
-      🎬 <i class="fas fa-film"></i> Livestream pt 2
-    </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/watch?v=hrgaHuYLgWQ" target="_blank" class="btn btn-warning mb-2">
-      🎬 <i class="fas fa-film"></i> Livestream pt 1
-    </a>
-  </li>
-</ul>
-
-
-
-              
-          </div>
-        </div>
-      </section>
-
-      <hr>
-
-<!-- Section 1: Donate Button/Progress and Sticker Info -->
-<section class="container mt-5">
   <div class="row">
-    <!-- Left Column: Donate Button and Progress Bar -->
-    <div class="col-12 col-md-6 text-center">
-
-<div class="alert alert-warning  d-flex align-items-center" role="alert">
-  <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
-  <div>
-    <strong>PSA:</strong> If you have not donated, YOU STILL CAN! Donations are open until <strong>1:30 PM EST today!</strong>
-    <div class="small text-muted">- Glenn</div>
-  </div>
-</div>
-<!-- COUNTDOWN TIMER - needs countdown.css and countdown.js enabled -->
-<div class="countdown-container">
-  <div class="countdown-title">Time Left to Donate</div>
-  <div class="countdown">
-    <span id="hours">00</span>h : 
-    <span id="minutes">00</span>m : 
-    <span id="seconds">00</span>s
-  </div>
-</div>
-
-
-
-      <a href="https://www.giveforgoodlouisville.org/organization/Louisville-Makes-Games" class="donate-btn mt-4">Donate Now</a>
-      
-      <!-- Donation Tracker -->
-      <div class="donation-tracker mt-5">
-        <div class="donation-amounts">
-          <span id="donation-received">$ <span id="current-donation-amount">0</span></span> / $ <span id="donation-goal">5000</span> Goal
-          <span id="percent-of-goal">(0% of our goal)</span>
-          <br>
-          <span id="donor-count-message">Thank you so much to our 0 donors so far!</span>
-        </div>
-        <div class="progress mt-4">
-          <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-      </div>
-    </div>
-    <!-- Right Column: Sticker Info -->
-    <div class="col-12 col-md-6 text-center">
-      <h4>$5 or more gets a LMG 'Darkmode' Sticker</h4>
-      <img src="img/darkmode-sticker.png" alt="LMG Darkmode Sticker" class="img-fluid" style="max-width: 400px;" aria-labelledby="event-3-description">
-    </div>
-  </div>
-</section>
-
-
-  <hr>
- 
-<!-- Section 2: Pixel Pledge and Pixel Grid -->
-<section class="container mt-5">
-  <div class="row">
-    <!-- Left Column: Pixel Grid Table -->
-    <div class="col-12 col-md-6">
-      <div class="pixel-pledge" style="width: 100%; height: 100%;">
-        <table>
-          <tbody>
-            <!-- Loop through 64 rows -->
-            <script>
-              for (let row = 0; row < 64; row++) {
-                document.write('<tr>');
-                // Loop through 64 columns
-                for (let col = 0; col < 64; col++) {
-                  let cellId = `cell-${row}-${col}`;
-                  document.write(`<td id="${cellId}"></td>`);
-                }
-                document.write('</tr>');
-              }
-            </script>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!-- Right Column: Pixel Pledge Info -->
-    <div class="col-12 col-md-6 text-start">
-      <h1 class="mb-4">Pixel Pledge</h1>
-      <p>For every dollar donated, you can add pixels to the Pixel Pledge! Help us create a collaborative image pixel by pixel.</p>
-      <p>After you donate, create an image using <a href="https://www.piskelapp.com/p/create/sprite" target="_blank">Piskel's free online pixel art tool</a> (or any tool you prefer). You can use a number of pixels equal to your donation amount. For example, if you donate $30, you can create a patch that’s 5x6 pixels, 3x10 pixels, or any combination that equals 30 pixels in total.</p>
-      <p>Once your pixel art is ready, submit your idea here and claim your spot on the grid!</p>
-      <a class="btn custom-btn-bid" href="https://docs.google.com/forms/d/e/1FAIpQLSeCZ8Gzvgx-kNjMub7YG3vtJG__Pd_3cAhAC27_0Cg78WwsjQ/viewform?usp=sf_link" target="_blank">Upload your pixels</a>
-      <br>(We will only accept and display appropriate images)
-    </div>
-  </div>
-</section>
-
-
-
-      <hr>
-
-
-
-
-      <!-- Livestream Section -->
-      <section>
-        <h1>Give for Good Day Livestream - Thursday, September 12</h1>
-        <div class="row mt-5">
-          <div class="col-sm-6">
-            <img src="img/kobu-agency-8lqd7vpkxzE-unsplash.jpg" alt="Give for Good Day Livestream Image" style="width:100%;">
-          </div>
-          <div class="col-sm-6">
-            <h2>Join us for a day of fun and support!</h2>
-            <p>Starting at 10 AM and running until midnight, we’ll have a variety of events and activities during our livestream. Here's what’s happening:</p>
-            <ul class="schedule">
-  
- 
-  
-  <li>10am to 11am: Intro/Welcome (Alex + Glenn + Jonah)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intro/Welcome+(Alex+Glenn+Jonah)&dates=20240912T140000Z/20240912T150000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>11am to 12pm: Playing Local Jam Games + Receive Donor Themes (Jonah + ?)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Playing+Local+Jam+Games+Receive+Donor+Themes+(Jonah)&dates=20240912T150000Z/20240912T160000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>12pm to 1pm: Music Jam Video (Lunch Break)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Music+Jam+Video+(Lunch+Break)&dates=20240912T160000Z/20240912T170000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>1pm to 2pm: One-Hour Jam (Jonah)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=One-Hour+Jam+(Jonah)&dates=20240912T170000Z/20240912T180000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>2pm to 3pm: Rapid-Fire Playing Small Local Games (Alex + Glenn)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Rapid-Fire+Playing+Small+Local+Games+(Alex+Glenn)&dates=20240912T180000Z/20240912T190000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>3pm to 4pm: Auction Item Winners + Lightning Talks Video (Alex)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Auction+Item+Winners+Lightning+Talks+(Alex)&dates=20240912T190000Z/20240912T200000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>4pm to 4:30pm: Play With Dev of Forgetting (Jonah + ?)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+With+Dev+of+Forgetting+(Jonah)&dates=20240912T200000Z/20240912T203000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>4:30pm to 5pm: Play With Dev of Hardcore Cottagecore (Alex + Jonah)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+With+Dev+of+Hardcore+Cottagecore+(Alex+Jonah)&dates=20240912T203000Z/20240912T210000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>5pm to 6pm: Spooky Jam Presentation 2021 (Dinner Break)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Spooky+Jam+Presentation+2021&dates=20240912T210000Z/20240912T220000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>6pm to 7pm: One-Hour Game Jam Check-Ins
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=One-Hour+Game+Jam+Check-Ins&dates=20240912T220000Z/20240912T230000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>7pm to 7:30pm: Play with Dev of Spellcard Academy (Colton + ?)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+With+Dev+of+Spellcard+Academy+(Colton)&dates=20240912T230000Z/20240912T233000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>7:30pm to 8pm: Play with Dev of Hovertank Arcade (Scott + ?)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+With+Dev+of+Hovertank+Arcade+(Scott)&dates=20240912T233000Z/20240913T000000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>8pm to 8:30pm: Play Explors with Dev (Alex Garbus + Jonah)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+Explors+With+Dev+(Alex+Garbus+Jonah)&dates=20240913T000000Z/20240913T003000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>8:30pm to 9pm: Play Mystery Game with the Dev (Mystery + ?)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Play+Mystery+Game+With+Dev+(Mystery)&dates=20240913T003000Z/20240913T010000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-<li>9pm to 10pm: Game Jam Showcase (Everyone!)
-    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Game+Jam+Showcase+(Everyone)&dates=20240913T010000Z/20240913T020000Z&details=&location=twitch.tv/louisvillemakesgames">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-</li>
-
-</ul>
-
-            <p>The livestream will continue all day until midnight, so be sure to tune in for some fun and surprises!</p>
-            <a href="https://www.twitch.tv/louisvillemakesgames" target="_blank" style="display:inline-block; padding:15px 30px; background-color:#6441A4; color:white; text-decoration:none; font-size:18px; border-radius:5px; margin-top:20px;">
-              <i class="fab fa-twitch"></i> Watch on Twitch </a>
-          </div>
-        </div>
-      </section>
-
-
-      <hr>
-      <!-- Submit themes Section -->
-      <section>
-        <h2>Submit a Theme for the Thursday Live Stream Micro Jams</h2>
-        <p>Join the LMG crew during their Thursday live stream for an exciting event: Micro Jams! For 1 hour at a time, the team will create games based on themes provided by donors. It's a great way to support and engage with the community!</p>
-        <p>Donors who contribute $10 or more can submit a theme that the LMG team will use as inspiration during their Micro Jam session. Your theme could be the next big idea they tackle live!</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDpXrTW8qBcG_dmbidQlysQjY1PgK3zquAn9ir7XYemmfE9A/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid">Submit Your Theme</a>
-      </section>
-
-
-
-      <hr>
-
-
-
-
-
-     <!-- Auction Section -->
-<section class="mt-5">
-  <h2>Auction Items</h2>
-  <p>Items graciously donated by our community members, 100% of the winning bid will go toward our Give for Good goal!</p>
-  <div class="row text-start">
-    <!-- Auction Item 1: Treasure Book -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/treasure.png" alt="Treasure Book" class="img-fluid mb-2">
-        <h4>Hardcore Gaming 101 Digest Vol. 5: Treasure</h4>
-        <p>A deep dive into cult classic video games by developer Treasure.</p>
-        <p>Current Bid: $ <span id="auction-item-1-bid">10</span><br>
-        <span class="bidder">MetaJ92</span><br>
-        
-          <span class="text-muted"></span> 
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Hardcore+Gaming+101+Digest+Vol.+5:+Treasure" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-    <!-- Auction Item 2: Mechanical Keyboard RK61 black / brown switches -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/kb-black.png" alt="Mechanical Keyboard RK61 black / brown switches" class="img-fluid mb-2">
-        <h4>Mechanical Keyboard RK61 black / brown switches (Open Box)</h4>
-        <p>Features: RF or Bluetooth connection</p>
-        <p>Current Bid: $ <span id="auction-item-2-bid">5</span>
-          <span class="text-muted">Alex G</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Mechanical+Keyboard+RK61+black+%2F+brown+switches" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-    <!-- Auction Item 3: Mechanical Keyboard RK61 White / red switches -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/kb-white.png" alt="Mechanical Keyboard RK61 White / red switches" class="img-fluid mb-2">
-        <h4>Mechanical Keyboard RK61 White / red switches (Open Box)</h4>
-        <p>Features: Bluetooth or wired connection, includes USB-C to USB-A cable</p>
-        <p>Current Bid: $ <span id="auction-item-3-bid">40</span><br>
-        <span class="bidder">Megan F</span><br>
-         
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Mechanical+Keyboard+RK61+White+%2F+red+switches" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
+    <div class="col-md-8">
+      <h1>What's going on?</h1>
     
-    <!-- Auction Item 4: Original Art Print - Animal Support -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-animal-support.jpg" alt="Original Art Print - Animal Support" class="img-fluid mb-2">
-        <h4>Original Art Print - Animal Support</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Current Bid: $ <span id="auction-item-4-bid">5</span>
-          <span class="text-muted">Jesse</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Animal+Support" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
+
+        <div class="row">
+          <div class="col-md-7">
+            <article>
+             
+              <article>
+                <h2>Into the World of Video Game Creation: My Presentation at the Bon Air Library</h2>
+                   <p class="author-date">By Alex Bezuska, on 2023-05-22</p>
+                <p>On May 21st, I had the awesome opportunity to present at the Bon Air Library in Louisville, Kentucky representing Louisville Makes Games. The topic was one that I am truly passionate about: how to get started making video games. The audience consisted mainly of enthusiastic teens, accompanied by some equally curious parents. Together, we had an open discussion about how video games are made.</p>
+                <a href="/blog.html#" target="_blank">Read more</a> or <a href="https://docs.google.com/presentation/d/10jE5Bs7kQ80-MGy0YTqB0VsHvh82gQe3GIQ5K-BwG7g/edit?usp&#x3D;sharing" target="_blank">View the full presentation slides here</a>
+              </article>
+             
+
+
+          </div>
+          <div class="col-md-5">
+            <div class="image-container"><img class="img-fluid" src="/img/bon-air-library.png"
+                alt="Into the World of Video Game Creation: My Presentation at the Bon Air Library"></div>
+          </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-md-4 callout-box">
+
+
+      <h1 class="mb-4"><i class="fas fa-info-circle"></i>New here?
+      </h1>
+
+
+      <p>No game development experience required, all community spaces and events are free and beginner-friendly.</p>
+      <p class="bold">Calling Artists, Animators, Storytellers, Programmers, Musicians, and all creative folks –this is
+        the community for you!</p>
+      <a class="btn btn-primary mt-3" href="https://discord.gg/gZwbF94UJK" target="_blank">
+        <i class="fab fa-discord"></i> Join our Discord Server!
+      </a>
+      <a class="btn btn-primary mt-3" href="https://www.meetup.com/LouisvilleMakesGames" target="_blank">
+        <i class="fas fa-calendar-alt mr-2"></i> Attend an Event!
+      </a>
+      <a class="btn btn-primary mt-3" href="resources.html" target="_blank">
+        <i class="fas fa-gamepad mr-2"></i> Get Started Making Games!
+      </a>
+
     </div>
 
-    <!-- Auction Item 5: Original Art Print - Bowstoise -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-bowstoise.jpg" alt="Original Art Print - Bowstoise" class="img-fluid mb-2">
-        <h4>Original Art Print - Bowstoise</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Current Bid: $ <span id="auction-item-5-bid">15</span>
-          <span class="text-muted">Eve N</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Bowstoise" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 6: Original Art Print - Gritty -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-gritty.jpg" alt="Original Art Print - Gritty" class="img-fluid mb-2">
-        <h4>Original Art Print - Gritty</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-6-bid">5</span>
-          <span class="text-muted">(Retail: $25.00)</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Gritty" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 7: Original Art Print - Mario 3 -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-mario3.jpg" alt="Original Art Print - Mario 3" class="img-fluid mb-2">
-        <h4>Original Art Print - Mario 3</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Current Bid: $ <span id="auction-item-7-bid">400</span>
-<br>
-        <span class="bidder">Nick L</span><br>
-       
-          <span class="text-muted"></span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Mario+3" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 8: Original Art Print - Ghost Fried Egg -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-gfhost-fried-egg.jpg" alt="Original Art Print - Ghost Fried Egg" class="img-fluid mb-2">
-        <h4>Original Art Print - Ghost Fried Egg</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-8-bid">25</span>
-          <span class="text-muted">Eve N</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Ghost+Fried+Egg" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 9: Original Art Print - Ghostbuster Luigi -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-ghostbuster-luigi.jpg" alt="Original Art Print - Ghostbuster Luigi" class="img-fluid mb-2">
-        <h4>Original Art Print - Ghostbuster Luigi</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-9-bid">40</span><br>
-        <span class="bidder">Jonah</span><br>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Ghostbuster+Luigi" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 10: Original Art Print - Mia Goth Peach -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/thebestjstn-mia-goth-peach.jpg" alt="Original Art Print - Mia Goth Peach" class="img-fluid mb-2">
-        <h4>Original Art Print - Mia Goth Peach</h4>
-        <p>8.5"x11" framed art print</p>
-        <p>Starting Bid: $ <span id="auction-item-10-bid">5</span>
-          <span class="text-muted">(Retail: $25.00)</span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Original+Art+Print+-+Mia+Goth+Peach" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-    <!-- Auction Item 11: Speakers -->
-    <div class="col-md-3 d-flex">
-      <div class="auction-item border rounded p-4 d-flex flex-column align-items-center w-100">
-        <img src="img/auction/speakers.jpg" alt="Speakers" class="img-fluid mb-2">
-        <h4>Logitech Z506 speaker set (Open Box)</h4>
-        <p>Like New</p>
-        <p>Starting Bid: $ <span id="auction-item-11-bid">40</span>
-          <span class="text-muted"></span>
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLU5Phf9ykit1xfqmB7v0SUgaAHuiPQbT76700tHxL6_Pmhw/viewform?usp=sf_link&entry.123456789=Wireless+Bluetooth+Speakers" class="btn custom-btn-bid mt-auto">Place Bid</a>
-      </div>
-    </div>
-
-
-  
+  </div>
 
   </div>
 
 
-</section>
+  </div>
+  </div>
 
 
 
+  <hr class="my-5">
 
 
-      <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="mb-4"><i class="fas fa-users"></i>Louisville Makes
+        Games Community</h2>
 
+      <p>Louisville Makes Games (LMG) is an inclusive community created to connect and support anyone in the
+        Louisville, Kentucky area who wants to create games! The main ways to get involved are to join our discord
+        server or attend a meetup event!</p>
 
-
-      <!-- Community Perks Section -->
-      <section class="mt-5">
-        <h2 class="mb-4">Community Perks</h2>
-        <p>By donating to Louisville Makes Games, you support game development workshops, talks, and sponsorships for community members attending industry events. In return for your generosity, we offer the following perks based on your donation amount:</p>
-        <!-- Donation Tiers -->
-        <div class="row mt-4">
-          <!-- Tier 1: $5 Donation -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>Sticky Business</h3>
-              <img src="img/g4g/darkmode-sticker.png" alt="LMG Sticker" class="img-fluid mb-3" style="max-width: 100px;">
-              <p>Donate $5 and receive a darkmode LMG Sticker!</p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=5" class="btn custom-btn-primary mt-auto" target="_blank">Donate $5</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
-          <!-- Tier 2: $25 Donation - Choose Next Game -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>Literal game Changer</h3>
-              <img src="img/g4g/controller.png" alt="Choose Next Game Perk" class="img-fluid mb-3" style="max-width: 150px;">
-              <p>Donate $25 and choose the next <em>local</em> game the crew plays on the livestream! See the list of games here: <a href="/games.html">local games</a>
-              </p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=25" class="btn custom-btn-primary mt-auto" target="_blank">Donate $25</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
-          <!-- Tier 3: $25 Donation - Desk Mat -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>LMG Desk Mat</h3>
-              <img src="img/lmg-deskmat.jpg" alt="LMG Desk Mat" class="img-fluid mb-3" style="max-width: 150px;">
-              <p>Donate $50 or more and receive a LMG Desk Mat!</p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=25" class="btn custom-btn-primary mt-auto" target="_blank">Donate $50</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
-          <!-- Tier 4: $50 Donation - T-Shirt -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>LMG T-Shirt</h3>
-              <img src="img/lmg-shirt.jpg" alt="LMG T-Shirt" class="img-fluid mb-3" style="max-width: 150px;">
-              <p>Donate $50 or more and receive an LMG T-Shirt!</p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=50" class="btn custom-btn-primary mt-auto" target="_blank">Donate $50</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
-          <!-- Tier 5: $50 Donation - Hot Pepper Challenge -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>🌶️ Hot Stuff</h3>
-              <img src="img/g4g/hot-pepper.png" alt="Hot Pepper Challenge" class="img-fluid mb-3" style="max-width: 150px;">
-              <p>Donate $50 to make someone on the crew eat one of Loi's hot peppers on the live stream!</p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=50" class="btn custom-btn-primary mt-auto" target="_blank">Donate $50</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
-          <!-- Tier 6: $100 Donation - T-Shirt and Desk Mat -->
-          <div class="col-12 col-md-4 d-flex">
-            <div class="perk-box p-4 border rounded d-flex flex-column align-items-center w-100">
-              <h3>LMG Swag Pack</h3>
-              <img src="img/g4g/swag-pack.png" alt="LMG T-Shirt and Desk Mat" class="img-fluid mb-3" style="max-width: 150px;">
-              <p>Donate $100 or more and receive both an LMG T-Shirt and Desk Mat!</p>
-              <a href="https://www.giveforgoodlouisville.org/donate/Louisville-Makes-Games?amount=100" class="btn custom-btn-primary mt-auto" target="_blank">Donate $100</a> then <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5SqHyxkhX_g15hepLW_XsrtuDm3wbtlvDjEbTZEu9YW_ndQ/viewform?usp=sf_link" target="_blank" class="btn custom-btn-bid mt-auto">Claim a Perk</a>
-            </div>
-          </div>
+      <p>A monthly virtual meetup to connect local Louisville area game developers and those who want to learn! It
+        will
+        always be free and open to anyone interested in creativity and collaboration.</p>
+      <div class="d-flex  my-3">
+        <div class="d-flex flex-column">
+          <a href="https://www.meetup.com/LouisvilleMakesGames" target="_blank" class="btn btn-primary"><i
+              class="fas fa-calendar-alt mr-2"></i> Virtual Meetup Events</a>
         </div>
-      </section>
-      <hr>
-      <!-- Call to Action -->
-      <div class="callout-box mt-5 mx-auto" style="max-width: 700px;">
-        <h1>Help Us Reach Our Goal!</h1>
-        <p>We're raising $5,000 to enhance our space, provide better resources, and host more events for local game developers. Every dollar counts, and your donation will help us grow the game development community in Louisville.</p>
-        <a href="https://www.giveforgoodlouisville.org/organization/Louisville-Makes-Games" class="donate-btn mt-3">Donate Now</a>
+        <div class="d-flex flex-column">
+          <a href="https://discord.gg/gZwbF94UJK" target="_blank" class="btn btn-primary"><i
+              class="fab fa-discord mr-2"></i> Join our Discord Server</a>
+        </div>
       </div>
-      <hr>
-      <!-- Social Media Links -->
-      <footer class="mt-5">
-        <div class="d-flex justify-content-center">
-          <a href="https://www.tiktok.com/@louisvillemakesgames" class="btn btn-outline-light mx-2" aria-label="Follow us on TikTok" target="_blank">
-            <i class="fab fa-tiktok fa-2x"></i>
-          </a>
-          <a href="https://www.instagram.com/louisvillemakesgames/" class="btn btn-outline-light mx-2" aria-label="Follow us on Instagram" target="_blank">
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
-          <a href="https://www.facebook.com/louisvillemakesgames" class="btn btn-outline-light mx-2" aria-label="Follow us on Facebook" target="_blank">
-            <i class="fab fa-facebook fa-2x"></i>
-          </a>
-          <a href="https://twitter.com/loumakesgames" class="btn btn-outline-light mx-2" aria-label="Follow us on Twitter" target="_blank">
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-        </div>
-      </footer>
-    </main>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/g4g.js"></script>
-    <script src="js/pixel-pledge.js"></script>
-    <script src="js/countdown.js"></script> 
-    <script src="js/shaking-elements.js"></script> 
+    </div>
+    <div class="col-md-6">
+      <div class="image-container"><img class="img-fluid" src="img/louisvillemakesgames-board.jpg"
+          alt="Placeholder Image"></div>
+    </div>
+  </div>
 
-  </body>
-</html>
+
+  <hr class="my-5">
+
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="image-container"><img class="img-fluid" src="img/jonah-presenting.jpg" alt="Placeholder Image"></div>
+    </div>
+    <div class="col-md-7">
+      <h2 class="mb-4"><i class="fas fa-heart"></i>Louisville Makes
+        Games!</h2>
+      <p>Are you interested in game development? Do you want to learn more about the local game development scene in
+        Louisville, Kentucky? Look no further than Louisville Makes Games!</p>
+      <p>We are a non-profit 501(c)3 organization dedicated to promoting game development as a viable career in our
+        city. Our programming classes for kids, industry talks, art gallery showcases, and other events all aim to
+        educate and advocate game development. Our first major project was establishing the physical space called Warp
+        Zone Louisville downtown, which we have made a home-base for all things game development in Louisville.</p>
+      <p><strong>Help continue our mission:</strong></p>
+      <a class="btn btn-primary btn-lg btn-block mt-3" href="donate.html" target="_blank">
+        <i class=" fa-solid fa-hand-holding-heart"></i>
+        <h5 class="d-inline">Donate to LMG</h5>
+      </a>
+    </div>
+  </div>
+
+
+  <hr class="my-5">
+
+
+  <div class="row">
+    <div class="col-md-7">
+      <h2 class="mb-4"><i class="fas fa-building"></i>What is Warp Zone?</h2>
+      <p>Warp Zone Louisville is a coworking space for anyone doing creative work! It is also the home base of LMG and
+        where we host our events. All LMG events are free and open to the public, but you can work from Warp Zone
+        Louisville
+        24/7 if you become a paid member.</p>
+
+
+      <a href="http://warpzonelouisville.com" target="_blank" class="btn btn-primary"><i
+          class="fas fa-calendar-alt mr-2"></i> Learn more about Warp Zone Louisville</a>
+
+
+
+    </div>
+    <div class="col-md-5">
+      <div class="image-container"><img class="img-fluid" src="img/warp-zone-louisville.png"
+          alt="Placeholder Image"></div>
+    </div>
+  </div>
+
+
+
+</main>
+
+
 <footer class="bg-dark text-light p-5">
   <div class="container">
     <div class="row">

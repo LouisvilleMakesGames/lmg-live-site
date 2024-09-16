@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }, 1000 / frameRate);
 
-                donorCountElement.textContent = `Thank you so much to our ${donors} donors so far!`;
+                donorCountElement.textContent = donors;
                 const donationPercentage = Math.floor((currentDonation / donationGoal) * 100);
                 percentOfGoalElement.textContent = `(${donationPercentage}% of our goal)`;
             });

@@ -633,3 +633,55 @@ text-align: left;
   font-weight: bold;
   color: #4CAF50;
 }
+
+
+/* Bids: Pulsating bidder */
+.has-bids .pulsating-bidder {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Won: Gold outline and shine effect */
+.won {
+  border: 2px solid gold;
+  position: relative;
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.won::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));
+  opacity: 0.6;
+  animation: shine 3s linear infinite;
+}
+
+/* Disabled: Greyed out, no interactions */
+.disabled {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
