@@ -111,9 +111,62 @@
       </div>
     </div>
   </nav>
-
-
 <main class="container my-5">
+
+<section class="container mt-5">
+  <div class="row">
+
+    <div class="col-sm-12 col-md-6">
+      <div class="pixel-pledge" style="width: 100%; height: 100%;">
+        <table>
+          <tbody>
+            <script>
+              for (let row = 0; row < 64; row++) {
+                document.write('<tr>');
+                // Loop through 64 columns
+                for (let col = 0; col < 64; col++) {
+                  let cellId = `cell-${row}-${col}`;
+                  document.write(`<td id="${cellId}"></td>`);
+                }
+                document.write('</tr>');
+              }
+            </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   
+      <div class="col-sm-12 col-md-6">
+
+        <!-- Pixel Pledge Description (Current) -->
+        <div style="display: none !important;"> 
+          <h1 class="mb-4">Pixel Pledge</h1>
+          <p>For every dollar donated, you can add pixels to the Pixel Pledge! Help us create a collaborative image pixel by pixel.</p>
+          <p>After you donate, create an image using Piskel&#x27;s free online pixel art tool or any tool you prefer.</p>
+          <p>Once your pixel art is ready, submit your idea here and claim your spot on the grid!</p>
+          <a class="btn custom-btn-bid" href="https://docs.google.com/forms/d/e/1FAIpQLSeCZ8Gzvgx-kNjMub7YG3vtJG__Pd_3cAhAC27_0Cg78WwsjQ/viewform?usp&#x3D;sf_link" target="_blank">Upload your pixels</a>
+          <br>(We will only accept and display appropriate images)
+        </div>
+
+        <!-- Pixel Pledge Description (Past) -->
+        <div> 
+          <h1 class="mb-4">Pixel Pledge</h1>
+          <p>Thank you for participating in the Pixel Pledge! Your contributions helped us create a collaborative image pixel by pixel.</p>
+          <p>If you have not yet claimed your pixels, you have one more week to submit! This was a special perk for those who donated during our #GiveforGoodLou fundraiser on September 12. Pixel submissions are only open to those who donated that week.</p>
+          <p>Deadline: September 21, 2024 at 11:59 PM</p>
+          <p>Time remaining to claim your pixels: <span id="countdown"></span></p>
+          <a class="btn custom-btn-bid" href="https://docs.google.com/forms/d/e/1FAIpQLSeCZ8Gzvgx-kNjMub7YG3vtJG__Pd_3cAhAC27_0Cg78WwsjQ/viewform?usp&#x3D;sf_link" target="_blank">Upload your pixels</a>
+          <br>(We will only accept and display appropriate images)
+        </div>
+
+  </div>
+</section>
+
+    <script src="js/pixel-pledge.js"></script>
+    <script src="js/pixel-pledge-countdown.js"></script>
+<hr>
+
+
 
 
   <div class="row">
