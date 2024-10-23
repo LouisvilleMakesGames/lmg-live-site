@@ -138,6 +138,7 @@ main.container {
   width: 100%;
   height: auto;
   object-fit: cover;
+  min-height: 276px;
 }
 
 /* Responsive Design */
